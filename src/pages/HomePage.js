@@ -6,46 +6,42 @@ import Cat from '../assets/cat.jpg';
 
 import Painting from '../components/painting';
 
+const paintings = [
+  {
+    title: 'Flying Carpet (1880)',
+    subtitle: 'Viktor Vasnetsov',
+    image: Flying,
+    altTag: 'Flying Carpet by Viktor Vasnetsov'
+  },
+  {
+    title: 'King Lake, California (1870-1875)',
+    subtitle: 'Albert Bierstadt',
+    image: Mountains,
+    altTag: 'King Lake, California by Albert Bierstadt'
+  },
+  {
+    title: "Winter: Cat on a Cushion (L'hiver: Chat sur un coussin)  (1913)",
+    subtitle: 'Théophile Alexandre Steinlen',
+    image: Cat,
+    altTag: 'Winter: Cat on a Cushion by Théophile Alexandre Steinlen'
+  }
+];
+
+export function ListAllPaintings() {
+  const paintingCards = paintings.map(painting =>
+    <Painting details={{ ...painting }}></Painting>
+  );
+  return <div className='paintings'>{paintingCards}</div>;
+}
+
+
 const HomePage = () => (
 
   <IonPage>
     <IonContent>
       <h1>This is the home page</h1>
 
-      <div className='paintings'>
-
-        <Painting
-          details={{
-            title: 'Flying Carpet (1880)',
-            subtitle: 'Viktor Vasnetsov',
-            image: Flying,
-            altTag: 'Flying Carpet by Viktor Vasnetsov'
-          }}
-        ></Painting>
-
-        <Painting
-          details={{
-            title: 'King Lake, California (1870-1875)',
-            subtitle: 'Albert Bierstadt',
-            image: Mountains,
-            altTag: 'King Lake, California by Albert Bierstadt'
-          }}
-        ></Painting>
-
-
-        {/* 
-             <IonCard>
-          <IonCardHeader>
-            <IonCardTitle>Winter: Cat on a Cushion (L'hiver: Chat sur un coussin)  (1913)</IonCardTitle>
-            <IonCardSubtitle>Théophile Alexandre Steinlen</IonCardSubtitle>
-          </IonCardHeader>
-
-          <IonCardContent>
-            <IonImg src={Cat} alt="Winter: Cat on a Cushion by Théophile Alexandre Steinlen"></IonImg>
-          </IonCardContent>
-        </IonCard> */}
-
-      </div>
+      <ListAllPaintings></ListAllPaintings>
     </IonContent>
   </IonPage>
 );

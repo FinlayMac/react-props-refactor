@@ -3,6 +3,9 @@ import { IonContent, IonPage, IonImg, IonCard, IonCardSubtitle, IonCardTitle, Io
 import Flying from '../assets/flying.jpg';
 import Mountains from '../assets/mountains.jpg';
 import Cat from '../assets/cat.jpg';
+
+import Painting from '../components/painting';
+
 const HomePage = () => (
 
   <IonPage>
@@ -10,7 +13,11 @@ const HomePage = () => (
       <h1>This is the home page</h1>
 
       <div className='paintings'>
-        <IonCard>
+        
+        <Painting></Painting>
+        <Painting></Painting>
+
+        {/* <IonCard>
           <IonCardHeader>
             <IonCardTitle>Flying Carpet (1880)</IonCardTitle>
             <IonCardSubtitle>Viktor Vasnetsov</IonCardSubtitle>
@@ -41,7 +48,7 @@ const HomePage = () => (
           <IonCardContent>
             <IonImg src={Cat} alt="Winter: Cat on a Cushion by Théophile Alexandre Steinlen"></IonImg>
           </IonCardContent>
-        </IonCard>
+        </IonCard> */}
 
       </div>
     </IonContent>

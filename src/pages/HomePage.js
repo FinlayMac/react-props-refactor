@@ -13,33 +13,28 @@ const HomePage = () => (
       <h1>This is the home page</h1>
 
       <div className='paintings'>
-        
-        <Painting></Painting>
-        <Painting></Painting>
 
-        {/* <IonCard>
-          <IonCardHeader>
-            <IonCardTitle>Flying Carpet (1880)</IonCardTitle>
-            <IonCardSubtitle>Viktor Vasnetsov</IonCardSubtitle>
-          </IonCardHeader>
+        <Painting
+          details={{
+            title: 'Flying Carpet (1880)',
+            subtitle: 'Viktor Vasnetsov',
+            image: Flying,
+            altTag: 'Flying Carpet by Viktor Vasnetsov'
+          }}
+        ></Painting>
 
-          <IonCardContent>
-            <IonImg src={Flying} alt="Flying Carpet by Viktor Vasnetsov"></IonImg>
-          </IonCardContent>
-        </IonCard>
+        <Painting
+          details={{
+            title: 'King Lake, California (1870-1875)',
+            subtitle: 'Albert Bierstadt',
+            image: Mountains,
+            altTag: 'King Lake, California by Albert Bierstadt'
+          }}
+        ></Painting>
 
-        <IonCard>
-          <IonCardHeader>
-            <IonCardTitle>King Lake, California (1870-1875)</IonCardTitle>
-            <IonCardSubtitle>Albert Bierstadt</IonCardSubtitle>
-          </IonCardHeader>
 
-          <IonCardContent>
-            <IonImg src={Mountains} alt="King Lake, California by Albert Bierstadt"></IonImg>
-          </IonCardContent>
-        </IonCard>
-
-        <IonCard>
+        {/* 
+             <IonCard>
           <IonCardHeader>
             <IonCardTitle>Winter: Cat on a Cushion (L'hiver: Chat sur un coussin)  (1913)</IonCardTitle>
             <IonCardSubtitle>Théophile Alexandre Steinlen</IonCardSubtitle>

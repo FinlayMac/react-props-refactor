@@ -1,6 +1,7 @@
 import { IonImg, IonCard, IonCardSubtitle, IonCardTitle, IonCardHeader, IonCardContent } from '@ionic/react';
 
-export default function Painting({details}) {
+export default function Card({details}) {
+
     return (
         <IonCard>
             <IonCardHeader>
